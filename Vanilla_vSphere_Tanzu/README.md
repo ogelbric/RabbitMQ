@@ -22,7 +22,7 @@ k apply -f ./rabbitmqcluster.yaml
 ```
 ## Logonto cluster / context
 ```
- kubectl vsphere login --server 192.168.5.90 --vsphere-username administrator@vsphere.local --tanzu-kubernetes-cluster-namespace namespace1000 --tanzu-kubernetes-cluster-name rabbitmq-cl1 --insecure-skip-tls-verify
+kubectl vsphere login --server 192.168.5.90 --vsphere-username administrator@vsphere.local --tanzu-kubernetes-cluster-namespace namespace1000 --tanzu-kubernetes-cluster-name rabbitmq-cl1 --insecure-skip-tls-verify
 k config use-context rabbitmq-cl1
 k get nodes
 ```
