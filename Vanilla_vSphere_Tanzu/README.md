@@ -93,7 +93,7 @@ http://192.168.5.100:15672/
 
 ## Outcome in RabbotMQ Console
 
-![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/tanzuplatform1.png)
+![Version](https://github.com/ogelbric/RabbitMQ/tree/main/Vanilla_vSphere_Tanzu/rabbitmq1.png)
 
 ## Outcome in vCenter
 
