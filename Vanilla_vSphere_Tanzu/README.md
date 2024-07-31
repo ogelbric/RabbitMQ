@@ -97,7 +97,7 @@ http://192.168.5.100:15672/
 
 ## Outcome in vCenter
 
-![Version](https://github.com/ogelbric/RabbitMQ/blob/main/Vanilla_vSphere_Tanzu/vsphere1.png)
+![Version](https://github.com/ogelbric/RabbitMQ/blob/main/Vanilla_vSphere_Tanzu/vcenter1.png)
 
 
 
