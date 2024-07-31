@@ -8,6 +8,10 @@ kubectl is aliased to k (alias k='kubectl --kubeconfig ~/.kube/config')
 ```
 k config use-context namespace1000
 ```
+## Create k8 cluster 
+```
+ k apply -f ./rabbitmqcluster.yaml
+```
 
 Auth
 ========
