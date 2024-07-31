@@ -47,7 +47,7 @@ k apply -f ./rabbitclusteroperator.yml
 #
 # Option use from my git repo / google repo
 #
-# k apply -f "https://raw.githubusercontent.com/ogelbric/RabbitMQ/main/Vanilla_vSphere_Tanzu/rabbitmqcluster.yaml"
+# k apply -f "https://raw.githubusercontent.com/ogelbric/RabbitMQ/main/Vanilla_vSphere_Tanzu/rabbitclusteroperator.yml"
 #
 kubectl get namespace rabbitmq-system
 kubectl get pods -n rabbitmq-system
