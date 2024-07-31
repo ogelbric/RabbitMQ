@@ -91,6 +91,16 @@ echo "PASSWORD:" $rpwd
 http://192.168.5.100:15672/
 ```
 
+## Outcome in RabbotMQ Console
+
+![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/tanzuplatform1.png)
+
+## Outcome in vCenter
+
+![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/tanzuplatform1.png)
+
+
+
 ### Inspiration
 ```
 https://github.com/Tanzu-Solutions-Engineering/tanzu-rabbitmq-event-streaming-showcase/tree/main
