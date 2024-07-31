@@ -10,7 +10,15 @@ k config use-context namespace1000
 ```
 ## Create k8 cluster 
 ```
- k apply -f ./rabbitmqcluster.yaml
+#
+# Option copy file local and execute from directory
+#
+k apply -f ./rabbitmqcluster.yaml
+#
+# Option pull from my git repo
+#
+# k apply -f "https://raw.githubusercontent.com/ogelbric/RabbitMQ/main/Vanilla_vSphere_Tanzu/rabbitmqcluster.yaml"
+#
 ```
 
 Auth
@@ -19,8 +27,18 @@ Auth
 
 Operator
 =======
+```
+#
+# Option copy file local and change to local registry from Docker
+#
 k apply -f ./rabbitclusteroperator.yml
+#
+# Option use official operator but it will pull from docker and encounter rate limit
+#
 #kubectl apply -f "https://github.com/rabbitmq/cluster-operator/releases/latest/download/cluster-operator.yml"
+#
+# option use cluster
+k apply -f "https://raw.githubusercontent.com/ogelbric/RabbitMQ/main/Vanilla_vSphere_Tanzu/rabbitmqcluster.yaml"
 
 kubectl get namespace rabbitmq-system
 kubectl get pods -n rabbitmq-system
