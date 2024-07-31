@@ -1,7 +1,7 @@
 #Take 1
 #Install a cluster
 
-kubectl is aliased to k
+kubectl is aliased to k (alias k='kubectl --kubeconfig ~/.kube/config')
 
 
 ## Enter the vSphere namespace (namespace1000)
