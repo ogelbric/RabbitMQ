@@ -63,14 +63,14 @@ k apply -f ./rabbitmq-3-node.yml -n rabbitmq-dev01
 #
 # Option use origional from Rabbit content (again be aware of docker rate limit)
 #
-#kubectl apply -f https://raw.githubusercontent.com/Tanzu-Solutions-Engineering/tanzu-rabbitmq-event-streaming-showcase/main/deployment/cloud/k8/data-services/rabbitmq/rabbitmq-3-node.yml
+#kubectl apply -f https://raw.githubusercontent.com/Tanzu-Solutions-Engineering/tanzu-rabbitmq-event-streaming-showcase/main/deployment/cloud/k8/data-services/rabbitmq/rabbitmq-3-node.yml -n rabbitmq-dev01
 #
 # Option use from my github repo / google repo
 #
-# k apply -f "https://raw.githubusercontent.com/ogelbric/RabbitMQ/main/Vanilla_vSphere_Tanzu/rabbitmq-3-node.yml"
+# k apply -f "https://raw.githubusercontent.com/ogelbric/RabbitMQ/main/Vanilla_vSphere_Tanzu/rabbitmq-3-node.yml" -n rabbitmq-dev01
 #
-kubectl get pods -w
-kubectl get services
+kubectl get pods -n rabbitmq-dev01
+kubectl get services -n rabbitmq-dev01
 #
 # find the external IP for rabbit for the admin GUI
 #
