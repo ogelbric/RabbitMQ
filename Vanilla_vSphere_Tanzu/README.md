@@ -1,6 +1,13 @@
 #Take 1
 #Install a cluster
 
+kubectl is aliased to k
+
+
+## Enter the vSphere namespace (namespace1000)
+```
+k config use-context namespace1000
+```
 
 Auth
 ========
