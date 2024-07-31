@@ -67,7 +67,7 @@ k apply -f ./rabbitmq-3-node.yml -n rabbitmq-dev01
 #
 # Option use from my github repo / google repo
 #
-# k apply -f "https:// "
+# k apply -f "https://raw.githubusercontent.com/ogelbric/RabbitMQ/main/Vanilla_vSphere_Tanzu/rabbitmq-3-node.yml"
 #
 kubectl get pods -w
 kubectl get services
