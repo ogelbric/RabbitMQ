@@ -26,12 +26,15 @@ kubectl vsphere login --server 192.168.5.90 --vsphere-username administrator@vsp
 k config use-context rabbitmq-cl1
 k get nodes
 ```
-Auth
-========
- k apply -f ./authorize-psp-for-gc-service-accounts.yaml
-
-Operator
-=======
+## Auth Policy
+```
+k apply -f ./authorize-psp-for-gc-service-accounts.yaml
+#
+# Option pull from my git repo
+#
+# k apply -f "https://raw.githubusercontent.com/ogelbric/RabbitMQ/main/Vanilla_vSphere_Tanzu/authorize-psp-for-gc-service-accounts.yaml"
+```
+## Operator
 ```
 #
 # Option copy file local and change to local registry from Docker
@@ -40,24 +43,40 @@ k apply -f ./rabbitclusteroperator.yml
 #
 # Option use official operator but it will pull from docker and encounter rate limit
 #
-#kubectl apply -f "https://github.com/rabbitmq/cluster-operator/releases/latest/download/cluster-operator.yml"
+# kubectl apply -f "https://github.com/rabbitmq/cluster-operator/releases/latest/download/cluster-operator.yml"
 #
-# option use cluster
-k apply -f "https://raw.githubusercontent.com/ogelbric/RabbitMQ/main/Vanilla_vSphere_Tanzu/rabbitmqcluster.yaml"
-
+# Option use from my git repo / google repo
+#
+# k apply -f "https://raw.githubusercontent.com/ogelbric/RabbitMQ/main/Vanilla_vSphere_Tanzu/rabbitmqcluster.yaml"
+#
 kubectl get namespace rabbitmq-system
 kubectl get pods -n rabbitmq-system
+```
 
-Rabbit Cluster
-=============
+## Rabbit Namespace / Rabbit app in 3 node Rabbit Cluster
+```
 k create ns rabbitmq-dev01
-
+#
+# Option copy file local
+#
 k apply -f ./rabbitmq-3-node.yml -n rabbitmq-dev01
-
+#
+# Option use origional from Rabbit content (again be aware of docker rate limit)
+#
 #kubectl apply -f https://raw.githubusercontent.com/Tanzu-Solutions-Engineering/tanzu-rabbitmq-event-streaming-showcase/main/deployment/cloud/k8/data-services/rabbitmq/rabbitmq-3-node.yml
+#
+# Option use from my github repo / google repo
+#
+# k apply -f "https:// "
+#
 kubectl get pods -w
 kubectl get services
-
+#
+# find the external IP for rabbit for the admin GUI
+#
+```
+## The rabbitMQ deployment set a user and password in a secret 
+```
 kubectl get secret rabbitmq-default-user -o jsonpath="{.data.username}"  -n rabbitmq-dev01
 #
 export ruser=`kubectl -n rabbitmq-dev01 get secret rabbitmq-default-user -o jsonpath="{.data.username}"| base64 --decode`
@@ -66,7 +85,10 @@ export rpwd=`kubectl -n rabbitmq-dev01 get secret rabbitmq-default-user -o jsonp
 echo ""
 echo "USER:" $ruser
 echo "PASSWORD:" $rpwd
-
-
+```
+## Go to admin GUI via browser
+```
 http://192.168.5.100:15672/
+```
 
+``
