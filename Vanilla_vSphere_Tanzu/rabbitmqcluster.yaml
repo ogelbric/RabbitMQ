@@ -1,0 +1,68 @@
+---
+apiVersion: cluster.x-k8s.io/v1beta1
+kind: Cluster
+metadata:
+  name: rabbitmq-cl1
+  namespace: namespace1000
+spec:
+  clusterNetwork:
+    services:
+      cidrBlocks: ["10.96.0.0/12"]
+    pods:
+      cidrBlocks: ["192.168.0.0/16"]
+    serviceDomain: "cluster.local"
+  topology:
+    class: tanzukubernetescluster
+    version: v1.23.8---vmware.2-tkg.2-zshippable
+    controlPlane:
+#      metadata:
+#        annotations:
+#          run.tanzu.vmware.com/resolve-os-image: os-name=ubuntu
+      replicas: 1
+    workers:
+      machineDeployments:
+        - class: node-pool
+          name: node-pool-1
+          replicas: 2
+#          metadata:
+#            annotations:
+#              run.tanzu.vmware.com/resolve-os-image: os-name=ubuntu
+    variables:
+#      - name: proxy
+#        value:
+#          httpProxy: http://lab-proxy.tkgu.chaoslab.systems:3128
+#          httpsProxy: http://lab-proxy.tkgu.chaoslab.systems:3128
+#          noProxy: [192.168.144.0/20, 192.168.128.0/20]
+#          noProxy:
+#          - 192.168.40.0/24
+#          - 192.168.60.0/24
+#          - 192.168.30.0/24
+#          - 192.168.75.0/24
+      - name:  ntp
+        value: "time.vmware.com"
+      - name: vmClass
+        value: best-effort-medium
+      - name: storageClass
+        value: pacific-gold-storage-policy
+      - name: defaultStorageClass
+        value: pacific-gold-storage-policy
+# ADDITIONAL VALUES
+      - name: nodePoolVolumes
+        value:
+        - capacity:
+            storage: "40Gi"
+          mountPath: "/var/lib/containerd"
+          name: containerd
+          storageClass: pacific-gold-storage-policy
+      - name: controlPlaneVolumes
+        value:
+        - capacity:
+            storage: "4Gi"
+          mountPath: "/var/lib/etcd"
+          name: etcd
+          storageClass: pacific-gold-storage-policy
+      - name: trust
+        value:
+          additionalTrustedCAs:
+          - name: xx-ca-1
+          - name: xx-ca-2
