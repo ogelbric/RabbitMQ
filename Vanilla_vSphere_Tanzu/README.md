@@ -91,4 +91,10 @@ echo "PASSWORD:" $rpwd
 http://192.168.5.100:15672/
 ```
 
-``
+### Inspiration
+```
+https://github.com/Tanzu-Solutions-Engineering/tanzu-rabbitmq-event-streaming-showcase/tree/main
+
+https://github.com/Tanzu-Solutions-Engineering/tanzu-rabbitmq-event-streaming-showcase/tree/main/docs/workshops/Podman/Labs
+
+```
