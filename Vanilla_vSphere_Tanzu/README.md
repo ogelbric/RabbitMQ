@@ -20,7 +20,12 @@ k apply -f ./rabbitmqcluster.yaml
 # k apply -f "https://raw.githubusercontent.com/ogelbric/RabbitMQ/main/Vanilla_vSphere_Tanzu/rabbitmqcluster.yaml"
 #
 ```
-
+## Logonto cluster / context
+```
+ kubectl vsphere login --server 192.168.5.90 --vsphere-username administrator@vsphere.local --tanzu-kubernetes-cluster-namespace namespace1000 --tanzu-kubernetes-cluster-name rabbitmq-cl1 --insecure-skip-tls-verify
+k config use-context rabbitmq-cl1
+k get nodes
+```
 Auth
 ========
  k apply -f ./authorize-psp-for-gc-service-accounts.yaml
