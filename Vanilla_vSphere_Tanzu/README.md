@@ -19,7 +19,7 @@ k apply -f ./rabbitmqcluster.yaml
 #
 # k apply -f "https://raw.githubusercontent.com/ogelbric/RabbitMQ/main/Vanilla_vSphere_Tanzu/rabbitmqcluster.yaml"
 #
-# change cluster yaml for different version
+# change cluster yaml for different version (tested with both these 2 versions) 
     #version: v1.23.8---vmware.2-tkg.2-zshippable
     version: v1.26.13---vmware.1-fips.1-tkg.3
 # 
