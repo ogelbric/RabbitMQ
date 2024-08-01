@@ -1,4 +1,4 @@
-# Take 1
+# Take 1 (RabbitMQ Install) 
 # Install a cluster
 
 `kubectl is aliased to k (alias k='kubectl --kubeconfig ~/.kube/config')`
