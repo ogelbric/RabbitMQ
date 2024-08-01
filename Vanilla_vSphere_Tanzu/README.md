@@ -53,6 +53,20 @@ kubectl get namespace rabbitmq-system
 kubectl get pods -n rabbitmq-system
 ```
 
+## Operator on k8 1.27 and above
+```
+k create ns rabbitmq-system 
+
+kubectl label --overwrite ns rabbitmq-system pod-security.kubernetes.io/enforce=privileged
+
+#kubectl label --overwrite ns rabbitmq-system securityContext.runAsNonRoot=true
+
+k apply -f "https://raw.githubusercontent.com/ogelbric/RabbitMQ/main/Vanilla_vSphere_Tanzu/rabbitclusteroperator.yml"
+k get pods -n rabbitmq-system
+```
+
+
+
 ## Rabbit Namespace / Rabbit app in 3 node Rabbit Cluster
 ```
 k create ns rabbitmq-dev01
