@@ -6,7 +6,7 @@
 
 ## 1) Tanzu Hub GUI
 
-![Version](https://github.com/ogelbric/RabbitMQ/main/Tanzu_Platform_Cluster_Build/blob/clg1.png)
+![Version](https://github.com/ogelbric/RabbitMQ/blob/main/Tanzu_Platform_Cluster_Build/clg1.png)
 
 
 ## 2 CLI
