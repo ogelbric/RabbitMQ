@@ -4,3 +4,21 @@
 ## 1) via the Tanzu Hub GUI
 ## 2) via the Tanzu CLI and yaml file
 
+
+
+
+### Labels (Before and after the addition of the new label):
+
+```
+k get ns rabbitmq-dev01  --show-labels
+
+NAME             STATUS   AGE    LABELS
+rabbitmq-dev01   Active   4m7s   kubernetes.io/metadata.name=rabbitmq-dev01
+
+[root@orfdns ~]# kubectl label --overwrite ns rabbitmq-dev01 pod-security.kubernetes.io/enforce=privileged
+
+k get ns rabbitmq-dev01  --show-labels
+
+NAME             STATUS   AGE     LABELS
+rabbitmq-dev01   Active   4m23s   kubernetes.io/metadata.name=rabbitmq-dev01,pod-security.kubernetes.io/enforce=privileged
+```
