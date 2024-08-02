@@ -93,6 +93,24 @@ kubectl get services -n rabbitmq-dev01
 #rabbitmq-nodes   ClusterIP      None           <none>          4369/TCP,25672/TCP                                                             108s
 
 ```
+## Obtain user ID and Password
+```
+kubectl get secret rabbitmq-default-user -o jsonpath="{.data.username}"  -n rabbitmq-dev01
+#
+export ruser=`kubectl -n rabbitmq-dev01 get secret rabbitmq-default-user -o jsonpath="{.data.username}"| base64 --decode`
+export rpwd=`kubectl -n rabbitmq-dev01 get secret rabbitmq-default-user -o jsonpath="{.data.password}"| base64 --decode`
+#
+echo ""
+echo "USER:" $ruser
+echo "PASSWORD:" $rpwd
+```
+## Result
+
+![Version](https://github.com/ogelbric/RabbitMQ/blob/main/Tanzu_Platform_Cluster_Build/rb1.png)
+
+![Version](https://github.com/ogelbric/RabbitMQ/blob/main/Tanzu_Platform_Cluster_Build/rb2.png)
+
+
 
 ## Extra Info
 
