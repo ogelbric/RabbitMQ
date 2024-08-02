@@ -4,7 +4,7 @@
 
 ## Build new Cluster group
 
-[!Version](https://github.com/ogelbric/RabbitMQ/blob/main/Tanzu_Platform_Build_with_Space/cl2wspace.png)
+![Version](https://github.com/ogelbric/RabbitMQ/blob/main/Tanzu_Platform_Build_with_Space/cl2wspace.png)
 
 ## Build Cluster
 ```
