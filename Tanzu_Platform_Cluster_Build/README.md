@@ -73,7 +73,26 @@ rabbitmq-system   Active   38s   app.kubernetes.io/component=rabbitmq-operator,a
 k apply -f "https://raw.githubusercontent.com/ogelbric/RabbitMQ/main/Vanilla_vSphere_Tanzu/rabbitclusteroperator.yml"
 k get pods -n rabbitmq-system
 ```
+## Deploy RabbitMQ POD's 
+```
+k create ns rabbitmq-dev01
+k get ns rabbitmq-dev01 --show-labels
+k apply -f "https://raw.githubusercontent.com/ogelbric/RabbitMQ/main/Vanilla_vSphere_Tanzu/rabbitmq-3-node.yml" -n rabbitmq-dev01
 
+kubectl get pods -n rabbitmq-dev01
+
+#NAME                READY   STATUS     RESTARTS   AGE
+#rabbitmq-server-0   0/1     Init:0/1   0          104s
+#rabbitmq-server-1   0/1     Running    0          104s
+#rabbitmq-server-2   0/1     Running    0          104s
+
+kubectl get services -n rabbitmq-dev01
+
+#NAME             TYPE           CLUSTER-IP     EXTERNAL-IP     PORT(S)                                                                        AGE
+#rabbitmq         LoadBalancer   10.96.35.132   192.168.5.114   5552:30257/TCP,15692:32538/TCP,5672:32452/TCP,15672:31527/TCP,1883:30958/TCP   108s
+#rabbitmq-nodes   ClusterIP      None           <none>          4369/TCP,25672/TCP                                                             108s
+
+```
 
 ## Extra Info
 
