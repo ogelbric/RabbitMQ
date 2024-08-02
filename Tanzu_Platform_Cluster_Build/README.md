@@ -33,6 +33,7 @@
 source ./tanzucli.src
 tanzu login
 tanzu project use AMER-East
+#using the cluster group I created via the GUI
 ```
 
 
