@@ -5,7 +5,10 @@
 ## 2) via the Tanzu CLI and yaml file
 
 
-
+### Origional Tanzu cluster create yaml
+```
+https://github.com/Tanzu-Solutions-Engineering/tanzu-platform-workshop/blob/main/lab-platform-engineer/templates/tkgs-cluster.yaml
+```
 
 ### Labels (Before and after the addition of the new label):
 
