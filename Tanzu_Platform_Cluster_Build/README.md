@@ -5,6 +5,16 @@
 ## 2) via the Tanzu CLI and yaml file
 
 
+## 2 CLI
+
+### Tanzu Login
+```
+source ./tanzucli.src
+tanzu login
+tanzu project use AMER-East
+```
+
+
 ### Origional Tanzu cluster create yaml
 ```
 https://github.com/Tanzu-Solutions-Engineering/tanzu-platform-workshop/blob/main/lab-platform-engineer/templates/tkgs-cluster.yaml
