@@ -67,8 +67,13 @@ rabbitmq-dev01   Active   4m23s   kubernetes.io/metadata.name=rabbitmq-dev01,pod
 k get ns rabbitmq-system  --show-labels
 NAME              STATUS   AGE   LABELS
 rabbitmq-system   Active   38s   app.kubernetes.io/component=rabbitmq-operator,app.kubernetes.io/name=rabbitmq-system,app.kubernetes.io/part-of=rabbitmq,kubernetes.io/metadata.name=rabbitmq-system,pod-security.kubernetes.io/enforce=privileged
-
 ```
+## Deploy RabbitMQ Operator
+```
+k apply -f "https://raw.githubusercontent.com/ogelbric/RabbitMQ/main/Vanilla_vSphere_Tanzu/rabbitclusteroperator.yml"
+k get pods -n rabbitmq-system
+```
+
 
 ## Extra Info
 
