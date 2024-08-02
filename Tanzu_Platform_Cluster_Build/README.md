@@ -1,15 +1,32 @@
 # Take 2: Build cluster with Tanzu Platform (Tanzu Apllication Engine Disabled) 
 
 ## There are two ways to build this k8 cluster (I will explain both options here) 
-## 1) via the Tanzu Hub GUI
-## 2) via the Tanzu CLI and yaml file
+## (1) via the Tanzu Hub GUI
+## (2) via the Tanzu CLI and yaml file
 
-## 1) Tanzu Hub GUI
+## (1) Tanzu Hub GUI
+
+### Create a cluster group (turn Tanzu application engin off) 
 
 ![Version](https://github.com/ogelbric/RabbitMQ/blob/main/Tanzu_Platform_Cluster_Build/clg1.png)
 
+### Create a cluster
 
-## 2 CLI
+![Version](https://github.com/ogelbric/RabbitMQ/blob/main/Tanzu_Platform_Cluster_Build/cl1.png)
+
+![Version](https://github.com/ogelbric/RabbitMQ/blob/main/Tanzu_Platform_Cluster_Build/cl2.png)
+
+![Version](https://github.com/ogelbric/RabbitMQ/blob/main/Tanzu_Platform_Cluster_Build/cl3.png)
+
+![Version](https://github.com/ogelbric/RabbitMQ/blob/main/Tanzu_Platform_Cluster_Build/cl4.png)
+
+![Version](https://github.com/ogelbric/RabbitMQ/blob/main/Tanzu_Platform_Cluster_Build/cl5.png)
+
+![Version](https://github.com/ogelbric/RabbitMQ/blob/main/Tanzu_Platform_Cluster_Build/cl6.png)
+
+![Version](https://github.com/ogelbric/RabbitMQ/blob/main/Tanzu_Platform_Cluster_Build/cl7.png)
+
+## (2) CLI
 
 ### Tanzu Login
 ```
