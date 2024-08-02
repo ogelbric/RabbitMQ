@@ -38,6 +38,11 @@ tanzu operations cluster create -f ./tkgsclusteryaml-rabbit.yaml
 
 ```
 
+## Create a mutating policy in the GUI to avoid having to set "permission" for the namespace 
+
+
+
+
 
 ### Origional Tanzu cluster create yaml
 ```
