@@ -20,6 +20,8 @@ How to deploy RabbitMQ via operator for 3 different situations
 ### ENV: Create k8 cluster via Tanzu Platfrom and deploy into a Tanzu Platform Space
 
 ![Take 3](https://github.com/ogelbric/RabbitMQ/blob/main/Tanzu_Platform_Cluster_Build_with_Space/README.md) 
+
+
 `work in progress`
 
 
