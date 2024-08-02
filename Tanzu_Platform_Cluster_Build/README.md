@@ -40,14 +40,14 @@ tanzu operations cluster create -f ./tkgsclusteryaml-rabbit.yaml
 
 ## Create a mutating policy in the GUI to avoid having to set "permission" for the namespace 
 
+![Version](https://github.com/ogelbric/RabbitMQ/blob/main/Tanzu_Platform_Cluster_Build/pol1.png)
 
+![Version](https://github.com/ogelbric/RabbitMQ/blob/main/Tanzu_Platform_Cluster_Build/pol2.png)
 
+![Version](https://github.com/ogelbric/RabbitMQ/blob/main/Tanzu_Platform_Cluster_Build/pol3.png)
 
+Result is on the namespaces created it will have pod-security.kubernetes.io/enforce=privileged
 
-### Origional Tanzu cluster create yaml
-```
-https://github.com/Tanzu-Solutions-Engineering/tanzu-platform-workshop/blob/main/lab-platform-engineer/templates/tkgs-cluster.yaml
-```
 
 ### Labels (Before and after the addition of the new label):
 
@@ -57,7 +57,7 @@ k get ns rabbitmq-dev01  --show-labels
 NAME             STATUS   AGE    LABELS
 rabbitmq-dev01   Active   4m7s   kubernetes.io/metadata.name=rabbitmq-dev01
 
-[root@orfdns ~]# kubectl label --overwrite ns rabbitmq-dev01 pod-security.kubernetes.io/enforce=privileged
+kubectl label --overwrite ns rabbitmq-dev01 pod-security.kubernetes.io/enforce=privileged
 
 k get ns rabbitmq-dev01  --show-labels
 
@@ -68,5 +68,12 @@ k get ns rabbitmq-system  --show-labels
 NAME              STATUS   AGE   LABELS
 rabbitmq-system   Active   38s   app.kubernetes.io/component=rabbitmq-operator,app.kubernetes.io/name=rabbitmq-system,app.kubernetes.io/part-of=rabbitmq,kubernetes.io/metadata.name=rabbitmq-system,pod-security.kubernetes.io/enforce=privileged
 
+```
+
+## Extra Info
+
+### Origional Tanzu cluster create yaml
+```
+https://github.com/Tanzu-Solutions-Engineering/tanzu-platform-workshop/blob/main/lab-platform-engineer/templates/tkgs-cluster.yaml
 ```
 
