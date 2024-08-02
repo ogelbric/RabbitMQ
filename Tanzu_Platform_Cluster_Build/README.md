@@ -4,6 +4,10 @@
 ## 1) via the Tanzu Hub GUI
 ## 2) via the Tanzu CLI and yaml file
 
+## 1) Tanzu Hub GUI
+
+![Version](https://github.com/ogelbric/RabbitMQ/Tanzu_Platform_Cluster_Build/blob/main/clg1.png)
+
 
 ## 2 CLI
 
