@@ -16,7 +16,7 @@ How to deploy RabbitMQ via operator for 3 different situations
 ![Take 2](https://github.com/ogelbric/RabbitMQ/blob/main/Tanzu_Platform_Cluster_Build/README.md) 
 
 
-## Take 3:
+## Take 3 (64 POD's after Space 89+ and counting :
 ### ENV: Create k8 cluster via Tanzu Platfrom and deploy into a Tanzu Platform Space
 
 ![Take 3](https://github.com/ogelbric/RabbitMQ/blob/main/Tanzu_Platform_Build_with_Space/README.md) 
